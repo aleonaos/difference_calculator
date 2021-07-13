@@ -28,3 +28,7 @@ $ make install
 ### Usage example.
 
 ### Finding differences between two flat json files.
+
+![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/Finding_diff_between_%20flat%20_files.gif?raw=true)
+
+---
