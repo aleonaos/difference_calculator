@@ -28,4 +28,3 @@ $ make install
 ### Usage example.
 
 ### Finding differences between two flat json files.
-
