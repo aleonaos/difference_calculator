@@ -29,7 +29,3 @@ $ make install
 
 ### Finding differences between two flat json files.
 
-
-
----
-
