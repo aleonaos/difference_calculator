@@ -1,5 +1,5 @@
 import path from 'path';
-import fs, { access } from 'fs';
+import fs from 'fs';
 import _ from 'lodash';
 
 const readJSON = (file) => {
@@ -40,7 +40,7 @@ const genDiff = (filepath1, filepath2) => {
     '{',
     ...arrayOfKeys,
     '}',
-  ]
+  ];
   return result.join('\n');
 };
 
