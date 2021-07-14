@@ -33,6 +33,7 @@ const genDiff = (filepath1, filepath2) => {
     if (value1 === value2) {
       return [...acc, `${indent.repeat(2)}${key}: ${value1}`];
     }
+
     return [...acc, `${indent}${operators[0]} ${key}: ${value1}`, `${indent}${operators[1]} ${key}: ${value2}`];
   }, []);
 
