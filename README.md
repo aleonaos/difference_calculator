@@ -9,7 +9,7 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/aleonaos/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/aleonaos/frontend-project-lvl2/actions)
-[![Node CI](https://github.com/aleonaos/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/aleonaos/frontend-project-lvl1/actions/workflows/nodejs.yml)
+[![Node CI](https://github.com/aleonaos/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/aleonaos/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/76bbc386ce053e482638/maintainability)](https://codeclimate.com/github/aleonaos/frontend-project-lvl2/maintainability)
 
 ---
