@@ -22,7 +22,6 @@ const genDiff = (filepath1, filepath2) => {
   const arrayOfKeys = combineKeys.reduce((acc, key) => {
     const value1 = parse1[key];
     const value2 = parse2[key];
-
     const indent = '  ';
 
     if (!keys2.includes(key)) {
