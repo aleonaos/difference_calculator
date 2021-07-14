@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1626262748861" clover="3.2.0">
-  <project timestamp="1626262748861" name="All files">
-    <metrics statements="48" coveredstatements="48" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2" elements="58" coveredelements="58" complexity="0" loc="48" ncloc="48" packages="1" files="1" classes="1"/>
+<coverage generated="1626263733976" clover="3.2.0">
+  <project timestamp="1626263733976" name="All files">
+    <metrics statements="49" coveredstatements="49" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2" elements="59" coveredelements="59" complexity="0" loc="49" ncloc="49" packages="1" files="1" classes="1"/>
     <file name="index.js" path="D:\Alyona\programmer\hexlet\frontend-project-lvl2\src\index.js">
-      <metrics statements="48" coveredstatements="48" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+      <metrics statements="49" coveredstatements="49" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
       <line num="1" count="2" type="cond" truecount="1" falsecount="0"/>
       <line num="2" count="2" type="stmt"/>
       <line num="3" count="2" type="stmt"/>
@@ -52,6 +52,7 @@
       <line num="46" count="1" type="stmt"/>
       <line num="47" count="1" type="stmt"/>
       <line num="48" count="1" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
