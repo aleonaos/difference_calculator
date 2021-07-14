@@ -4,8 +4,9 @@ import _ from 'lodash';
 
 const readJSON = (file) => {
   const jsonFile = fs.readFileSync(path.resolve(file), 'utf-8');
+  const parseFile = JSON.parse(jsonFile);
 
-  return JSON.parse(jsonFile);
+  return parseFile;
 };
 
 const operators = ['-', '+'];
