@@ -41,6 +41,7 @@ const genDiff = (filepath1, filepath2) => {
     ...arrayOfKeys,
     '}',
   ];
+
   return result.join('\n');
 };
 
