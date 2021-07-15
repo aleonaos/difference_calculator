@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import _ from 'lodash';
 import parse from './parsers.js';
+import formatting from './formatters/stylish.js';
 
 const makeFileData = (filepath) => {
   const data = fs.readFileSync(path.resolve(filepath), 'utf-8');
@@ -10,7 +11,37 @@ const makeFileData = (filepath) => {
   return { data, type };
 };
 
-const operators = ['-', '+'];
+const buildDiff = (firstObject, secondObject) => {
+  const keys1 = Object.keys(firstObject);
+  const keys2 = Object.keys(secondObject);
+  const combineKeys = _.union(keys1, keys2).sort();
+
+  const result = combineKeys.map((key) => {
+    const firstValue = firstObject[key];
+    const secondValue = secondObject[key];
+
+    if (!_.has(secondObject, key)) {
+      return { name: key, status: 'deleted', value: firstValue };
+    }
+    if (!_.has(firstObject, key)) {
+      return { name: key, status: 'added', value: secondValue };
+    }
+    if (firstValue === secondValue) {
+      return { name: key, status: 'unmodified', value: secondValue };
+    }
+    if (_.isObject(firstValue) && _.isObject(secondValue)) {
+      return { name: key, status: 'merged', children: buildDiff(firstValue, secondValue) };
+    }
+    return {
+      name: key,
+      status: 'modified',
+      firstValue,
+      secondValue,
+    };
+  });
+
+  return result;
+};
 
 const genDiff = (filepath1, filepath2) => {
   const fileData1 = makeFileData(filepath1);
@@ -19,35 +50,10 @@ const genDiff = (filepath1, filepath2) => {
   const parsedFile1 = parse(fileData1.type, fileData1.data);
   const parsedFile2 = parse(fileData2.type, fileData2.data);
 
-  const keys1 = Object.keys(parsedFile1);
-  const keys2 = Object.keys(parsedFile2);
-  const combineKeys = _.union(keys1, keys2).sort();
+  const diff = buildDiff(parsedFile1, parsedFile2);
+  const result = formatting(diff);
 
-  const arrayOfKeys = combineKeys.reduce((acc, key) => {
-    const value1 = parsedFile1[key];
-    const value2 = parsedFile2[key];
-    const indent = '  ';
-
-    if (!keys2.includes(key)) {
-      return [...acc, `${indent}${operators[0]} ${key}: ${value1}`];
-    }
-    if (!keys1.includes(key)) {
-      return [...acc, `${indent}${operators[1]} ${key}: ${value2}`];
-    }
-    if (value1 === value2) {
-      return [...acc, `${indent.repeat(2)}${key}: ${value2}`];
-    }
-
-    return [...acc, `${indent}${operators[0]} ${key}: ${value1}`, `${indent}${operators[1]} ${key}: ${value2}`];
-  }, []);
-
-  const result = [
-    '{',
-    ...arrayOfKeys,
-    '}',
-  ];
-
-  return result.join('\n');
+  return result;
 };
 
 export default genDiff;
