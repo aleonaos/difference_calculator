@@ -15,10 +15,14 @@ const cases = [
 ];
 
 describe('gendiff', () => {
-  test.each(cases)('compare two %s files', (type, expectedResult) => {
-    const expected = readFile(expectedResult);
-    const before = getFixturePath(`file1.${type}`);
-    const after = getFixturePath(`file2.${type}`);
-    expect(genDiff(before, after)).toEqual(expected);
-  });
+  test.each(cases)(
+    'compare two %s files',
+    (type, expectedResult) => {
+      const expected = readFile(expectedResult).trim();
+      const before = getFixturePath(`file1.${type}`);
+      const after = getFixturePath(`file2.${type}`);
+      const generate = genDiff(before, after).trim();
+      expect(generate).toEqual(expected);
+    },
+  );
 });
