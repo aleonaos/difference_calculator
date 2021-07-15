@@ -30,8 +30,14 @@ $ make install
 
 ### Usage example.
 
-#### Finding differences between two flat json files.
+#### Finding differences between two flat files(.json or .yml).
 
 ![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_flat_files.gif?raw=true)
+
+---
+
+#### Finding differences between two files with nested structure(.json or .yml).
+
+![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_nested_files.gif?raw=true)
 
 ---
