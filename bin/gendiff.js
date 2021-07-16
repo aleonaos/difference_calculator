@@ -6,11 +6,7 @@ program
   .version('0.0.1')
   .arguments('<filepath1> <filepath2>')
   .description('Compares two configuration files and shows a difference.')
-  .option('-f, --format [type]', 'choose output format: stylish | plain | json', 'stylish')
-  .action(
-    (filepath1, filepath2) => {
-      console.log(genDiff(filepath1, filepath2));
-    },
-  );
-
-program.parse(process.argv);
+  .option('-f, --format [type]', 'output format: plain, stylish', 'stylish')
+  .action((filepath1, filepath2) => (
+    console.log(genDiff(filepath1, filepath2, program.format))))
+  .parse(process.argv);

@@ -1,11 +1,12 @@
 import _ from 'lodash';
-
-const getName = (object) => object.name;
-const getStatus = (object) => object.status;
-const getChildren = (object) => object.children;
-const getValue = (object) => object.value;
-const getFirstValue = (object) => object.firstValue;
-const getSecondValue = (object) => object.secondValue;
+import {
+  getKey,
+  getStatus,
+  getChildren,
+  getValue,
+  getFirstValue,
+  getSecondValue,
+} from '../getter.js';
 
 const expandValue = (initialValue) => {
   if (!_.isObject(initialValue)) {
@@ -18,7 +19,7 @@ const expandValue = (initialValue) => {
 
 export default (diff) => {
   const iter = (data, depth) => data.flatMap((item) => {
-    const key = getName(item);
+    const key = getKey(item);
     const status = getStatus(item);
     const children = getChildren(item);
     const value = getValue(item);
