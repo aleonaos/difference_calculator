@@ -38,12 +38,16 @@ $ make install
 
 ### Various output styles are available
 
-##### Stylish (default)
+##### To stylish (default)
 
 ![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_nested_files.gif?raw=true)
 
-##### Plain
+##### To plain
 
 ![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/to_plain_format.gif?raw=true)
+
+##### To JSON
+
+![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_json_format.gif?raw=true)
 
 ---
