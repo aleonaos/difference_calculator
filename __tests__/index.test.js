@@ -10,18 +10,20 @@ const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', 
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
 const cases = [
-  ['json', 'expectedJSON.txt'],
-  ['yml', 'expectedJSON.txt'],
+  ['stylish', 'json', 'expectedStylish.txt'],
+  ['stylish', 'yml', 'expectedStylish.txt'],
+  ['plain', 'json', 'expectedPlain.txt'],
+  ['plain', 'yml', 'expectedPlain.txt'],
 ];
 
 describe('gendiff', () => {
   test.each(cases)(
     'compare two %s files',
-    (type, expectedResult) => {
+    (format, type, expectedResult) => {
       const expected = readFile(expectedResult).trim();
-      const before = getFixturePath(`file1.${type}`);
-      const after = getFixturePath(`file2.${type}`);
-      const generate = genDiff(before, after).trim();
+      const first = getFixturePath(`file1.${type}`);
+      const second = getFixturePath(`file2.${type}`);
+      const generate = genDiff(first, second, format).trim();
       expect(generate).toEqual(expected);
     },
   );
