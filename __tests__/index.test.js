@@ -17,6 +17,8 @@ const cases = [
   ['stylish', 'yml', 'expectedStylish.txt'],
   ['plain', 'json', 'expectedPlain.txt'],
   ['plain', 'yml', 'expectedPlain.txt'],
+  ['json', 'json', 'expectedJSON.txt'],
+  ['json', 'yml', 'expectedJSON.txt'],
 ];
 
 describe('gendiff', () => {
