@@ -40,9 +40,10 @@ $ make install
 
 ##### Stylish (default)
 
-![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/to_plain_format.gif?raw=true)
+![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_nested_files.gif?raw=true)
 
 ##### Plain
 
+![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/to_plain_format.gif?raw=true)
 
 ---
