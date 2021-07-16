@@ -36,8 +36,13 @@ $ make install
 
 ---
 
-#### Finding differences between two files with nested structure(.json or .yml).
+### Various output styles are available
+
+##### Stylish (default)
 
 ![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_nested_files.gif?raw=true)
+
+##### Plain
+
 
 ---
