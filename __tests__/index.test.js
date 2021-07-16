@@ -18,13 +18,14 @@ const cases = [
 
 describe('gendiff', () => {
   test.each(cases)(
-    'compare two %s files',
+    'files formatted as %p',
     (format, type, expectedResult) => {
-      const expected = readFile(expectedResult).trim();
+      console.log(expectedResult);
+      const result = readFile(expectedResult);
       const first = getFixturePath(`file1.${type}`);
       const second = getFixturePath(`file2.${type}`);
-      const generate = genDiff(first, second, format).trim();
-      expect(generate).toEqual(expected);
+      const generate = genDiff(first, second, format);
+      expect(generate).toEqual(result);
     },
   );
 });

@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import _ from 'lodash';
 import parse from './parsers.js';
-import formatting from './formatters/index.js';
+import format from './formatters/index.js';
 
 const makeFileData = (filepath) => {
   const data = fs.readFileSync(path.resolve(filepath), 'utf-8');
@@ -43,7 +43,7 @@ const buildDiff = (firstObject, secondObject) => {
   return result;
 };
 
-const genDiff = (filepath1, filepath2, format) => {
+const genDiff = (filepath1, filepath2, outputFormat) => {
   const fileData1 = makeFileData(filepath1);
   const fileData2 = makeFileData(filepath2);
 
@@ -51,7 +51,7 @@ const genDiff = (filepath1, filepath2, format) => {
   const parsedFile2 = parse(fileData2.type, fileData2.data);
 
   const diff = buildDiff(parsedFile1, parsedFile2);
-  const result = formatting(format, diff);
+  const result = format(outputFormat, diff);
 
   return result;
 };
