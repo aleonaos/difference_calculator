@@ -14,7 +14,7 @@ const makeFileData = (filepath) => {
 const buildDiff = (firstObject, secondObject) => {
   const keys1 = Object.keys(firstObject);
   const keys2 = Object.keys(secondObject);
-  const combineKeys = _.union(keys1, keys2).sort();
+  const combineKeys = _.union(keys1, keys2);
 
   const result = combineKeys.map((key) => {
     const firstValue = firstObject[key];
