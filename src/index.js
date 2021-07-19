@@ -12,9 +12,7 @@ const makeFileData = (filepath) => {
 };
 
 const buildDiff = (firstObject, secondObject) => {
-  const keys1 = Object.keys(firstObject);
-  const keys2 = Object.keys(secondObject);
-  const combineKeys = _.union(keys1, keys2);
+  const combineKeys = _.union(_.keys(firstObject), _.keys(secondObject));
   const sortedKeys = _.sortBy(combineKeys);
 
   const result = sortedKeys.map((key) => {
