@@ -15,8 +15,9 @@ const buildDiff = (firstObject, secondObject) => {
   const keys1 = Object.keys(firstObject);
   const keys2 = Object.keys(secondObject);
   const combineKeys = _.union(keys1, keys2);
+  const sortedKeys = _.sortBy(combineKeys);
 
-  const result = combineKeys.map((key) => {
+  const result = sortedKeys.map((key) => {
     const firstValue = firstObject[key];
     const secondValue = secondObject[key];
 
