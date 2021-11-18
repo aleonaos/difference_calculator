@@ -1,9 +1,7 @@
 <a name="contents"></a>
 
-## Difference calculator
+## Вычислитель отличий
 [difference-calculator]: https://github.com/aleonaos/frontend-project-lvl2 "Difference-calculator"
-
-#### Educational project by profession frontend developer from online platform Hexlet
 
 ---
 
@@ -15,38 +13,38 @@
 
 ---
 
-Difference calculator - a program that determines the difference between two data structures.
-##### Utility features
-* Support for different input formats: yaml, json.
-* Generating a report in plain text, stylish and json format.
+Вычислитель отличий - программа, определяющая различия между двемя структурами данных.
+##### Возможности утилиты
+* Поодержка разных форматов ввода: yaml, json.
+* Формирование отчёта в форматах: plain text, stylish, json.
 
 ---
 
-### Installation
+### Установка
 ```
 $ make install
 ```
 ---
 
-### Usage example.
+### Примеры использования.
 
-#### Finding differences between two flat files(.json or .yml).
+#### Поиск отличий между двумя плоскими файлами(.json или .yml).
 
 ![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_flat_files.gif?raw=true)
 
 ---
 
-### Various output styles are available
+### Доступны различные типы ввода
 
-##### To stylish (default)
+##### Stylish (по умолчанию)
 
 ![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_nested_files.gif?raw=true)
 
-##### To plain
+##### Plain
 
 ![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/to_plain_format.gif?raw=true)
 
-##### To JSON
+##### JSON
 
 ![Alt Text](https://github.com/aleonaos/frontend-project-lvl2/blob/main/src/examples/gendiff_json_format.gif?raw=true)
 
