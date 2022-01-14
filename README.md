@@ -1,11 +1,13 @@
 <a name="contents"></a>
 
 ## Вычислитель отличий
-[difference-calculator]: https://github.com/aleonaos/frontend-project-lvl2 "Difference-calculator"
+
+[difference-calculator]: https://github.com/aleonaos/frontend-project-lvl2 'Difference-calculator'
 
 ---
 
 ### Hexlet tests and linter status:
+
 [![Actions Status](https://github.com/aleonaos/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/aleonaos/frontend-project-lvl2/actions)
 [![Node CI](https://github.com/aleonaos/frontend-project-lvl2/actions/workflows/nodejs.yml/badge.svg)](https://github.com/aleonaos/frontend-project-lvl2/actions/workflows/nodejs.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/72b54ed519889b6fe954/maintainability)](https://codeclimate.com/github/aleonaos/frontend-project-lvl2/maintainability)
@@ -13,17 +15,23 @@
 
 ---
 
-Вычислитель отличий - программа, определяющая различия между двемя структурами данных.
-##### Возможности утилиты
-* Поддержка разных форматов ввода: yaml, json.
-* Формирование отчёта в форматах: plain text, stylish, json.
+Вычислитель отличий - программа, определяющая различия между двумя структурами данных.
+
+##### Возможности утилиты:
+
+- Поддержка разных форматов ввода: yaml, json.
+- Формирование отчёта в форматах: plain text, stylish, json.
+
+Стек: _JS, Node.js, commander, filesystem, lodash, Jest, ESLint, make, npm, Git, GitHub Actions (CI), CodeClimate_.
 
 ---
 
 ### Установка
+
 ```
 $ make install
 ```
+
 ---
 
 ### Примеры использования.
